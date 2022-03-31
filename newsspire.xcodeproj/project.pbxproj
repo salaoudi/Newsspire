@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		848DD2382717B5B3002A4914 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848DD2372717B5B3002A4914 /* Preview Assets.xcassets */; };
 		848DD23A2717B5B3002A4914 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DD2392717B5B3002A4914 /* Persistence.swift */; };
 		848DD23D2717B5B3002A4914 /* newsspire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848DD23B2717B5B3002A4914 /* newsspire.xcdatamodeld */; };
+		848DD2492717B73F002A4914 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DD2482717B73F002A4914 /* NewsModel.swift */; };
+		84CAC0F6271AC176003702C6 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 84CAC0F5271AC176003702C6 /* SwiftyJSON */; };
+		84CAC0FE271ACE28003702C6 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 84CAC0FD271ACE28003702C6 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,7 @@
 		848DD2392717B5B3002A4914 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		848DD23C2717B5B3002A4914 /* newsspire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = newsspire.xcdatamodel; sourceTree = "<group>"; };
 		848DD23E2717B5B3002A4914 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848DD2482717B73F002A4914 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CAC0FE271ACE28003702C6 /* SDWebImageSwiftUI in Frameworks */,
+				84CAC0F6271AC176003702C6 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 			children = (
 				848DD22F2717B5B2002A4914 /* newsspire */,
 				848DD22E2717B5B2002A4914 /* Products */,
+				84CAC0F1271A6C97003702C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +63,12 @@
 		848DD22F2717B5B2002A4914 /* newsspire */ = {
 			isa = PBXGroup;
 			children = (
-				848DD2302717B5B2002A4914 /* newsspireApp.swift */,
+				848DD2472717B660002A4914 /* CORE DATA MODAL */,
+				848DD2462717B645002A4914 /* JSON MODAL */,
 				848DD2322717B5B2002A4914 /* ContentView.swift */,
-				848DD2342717B5B3002A4914 /* Assets.xcassets */,
-				848DD2392717B5B3002A4914 /* Persistence.swift */,
+				848DD2302717B5B2002A4914 /* newsspireApp.swift */,
 				848DD23E2717B5B3002A4914 /* Info.plist */,
-				848DD23B2717B5B3002A4914 /* newsspire.xcdatamodeld */,
+				848DD2342717B5B3002A4914 /* Assets.xcassets */,
 				848DD2362717B5B3002A4914 /* Preview Content */,
 			);
 			path = newsspire;
@@ -73,6 +80,30 @@
 				848DD2372717B5B3002A4914 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		848DD2462717B645002A4914 /* JSON MODAL */ = {
+			isa = PBXGroup;
+			children = (
+				848DD2482717B73F002A4914 /* NewsModel.swift */,
+			);
+			path = "JSON MODAL";
+			sourceTree = "<group>";
+		};
+		848DD2472717B660002A4914 /* CORE DATA MODAL */ = {
+			isa = PBXGroup;
+			children = (
+				848DD2392717B5B3002A4914 /* Persistence.swift */,
+				848DD23B2717B5B3002A4914 /* newsspire.xcdatamodeld */,
+			);
+			path = "CORE DATA MODAL";
+			sourceTree = "<group>";
+		};
+		84CAC0F1271A6C97003702C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +122,10 @@
 			dependencies = (
 			);
 			name = newsspire;
+			packageProductDependencies = (
+				84CAC0F5271AC176003702C6 /* SwiftyJSON */,
+				84CAC0FD271ACE28003702C6 /* SDWebImageSwiftUI */,
+			);
 			productName = newsspire;
 			productReference = 848DD22D2717B5B2002A4914 /* newsspire.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +153,11 @@
 				Base,
 			);
 			mainGroup = 848DD2242717B5B2002A4914;
+			packageReferences = (
+				848DD24B2717CB72002A4914 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				84CAC0EA271A68C0003702C6 /* XCRemoteSwiftPackageReference "url-image" */,
+				84CAC0F4271AC176003702C6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 848DD22E2717B5B2002A4914 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,6 +188,7 @@
 				848DD2332717B5B2002A4914 /* ContentView.swift in Sources */,
 				848DD23D2717B5B3002A4914 /* newsspire.xcdatamodeld in Sources */,
 				848DD2312717B5B2002A4914 /* newsspireApp.swift in Sources */,
+				848DD2492717B73F002A4914 /* NewsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +377,46 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		848DD24B2717CB72002A4914 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+		84CAC0EA271A68C0003702C6 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+		84CAC0F4271AC176003702C6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84CAC0F5271AC176003702C6 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84CAC0F4271AC176003702C6 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		84CAC0FD271ACE28003702C6 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 848DD24B2717CB72002A4914 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		848DD23B2717B5B3002A4914 /* newsspire.xcdatamodeld */ = {
